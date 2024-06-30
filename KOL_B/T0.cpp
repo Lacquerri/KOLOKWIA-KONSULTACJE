@@ -31,7 +31,7 @@ public:
 
 class Ksiazka
 {
-private:
+protected:
 	char tytul[50];
 	int strony;
 	Dostepnosc dostep;
