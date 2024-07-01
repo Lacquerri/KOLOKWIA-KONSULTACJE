@@ -1,3 +1,4 @@
+
 #define _CRT_SECURE_NO_WARNINGS
 
 using namespace std;
@@ -115,16 +116,16 @@ Ksiazka* Ksiazka::wzorzec = nullptr;
 
 class EBook : public Ksiazka {
 private:
-	int rozmiar;
+	double rozmiar;
 public:
 	void set_rozmiar(int size) {
 		if (size < 1) rozmiar = 1;
 		else rozmiar = size;
 	}
 
-	int get_rozmiar() { return rozmiar; }
+	double get_rozmiar() { return rozmiar; }
 
-	EBook(const char* nowyTytul, int ilosc, Dostepnosc nowyDostep, Autor* nowyAutor, int size) : Ksiazka(nowyTytul, ilosc, nowyDostep, nowyAutor) {
+	EBook(const char* nowyTytul, int ilosc, Dostepnosc nowyDostep, Autor* nowyAutor, double size) : Ksiazka(nowyTytul, ilosc, nowyDostep, nowyAutor) {
 		set_rozmiar(size);
 	}
 
